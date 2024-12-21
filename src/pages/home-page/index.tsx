@@ -1,5 +1,5 @@
-import { CodeEditor, ResultBlock } from "../../entities";
-import { LanguageSelector, ThemeSelector, RunButton } from "../../features";
+import { CodeEditor, ResultBlock } from "../../entities/index.ts";
+import { LanguageSelector, ThemeSelector, RunButton } from "../../features/index.ts";
 import { useState } from "react";
 
 const HomePage = () => {

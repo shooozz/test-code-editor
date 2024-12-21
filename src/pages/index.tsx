@@ -1,7 +1,5 @@
-import { lazy } from "react";
 import { Route, Routes } from "react-router";
-
-const HomePage = lazy(() => import("./home-page"));
+import HomePage from "./home-page/index.ts";
 
 export const Routing = () => {
   return (
