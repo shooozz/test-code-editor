@@ -1,4 +1,8 @@
-export const ResultBlock = ({ result }) => (
+interface Props {
+  result: string;
+}
+
+export const ResultBlock: React.FC<Props> = ({ result }) => (
   <div
     style={{
       marginTop: "20px",

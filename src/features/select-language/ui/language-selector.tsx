@@ -1,16 +1,23 @@
-import { useState } from "react";
+import { ChangeEvent } from "react";
 
-export const LanguageSelector = () => {
-  const [language, setLanguage] = useState("javascript");
+interface Props {
+  language: string;
+  setLanguage: (language: string) => void;
+}
+
+export const LanguageSelector: React.FC<Props> = ({ language, setLanguage }) => {
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setLanguage(e.target.value);
+  };
 
   return (
     <div>
-      <label htmlFor="language-select">Choose Language: </label>
+      <label htmlFor="language-select">Выберите язык: </label>
       <select
         id="language-select"
         value={language}
-        onChange={(e) => setLanguage(e.target.value)}
-        style={{ padding: "5px", fontSize: "16px" }}
+        onChange={handleChange}
+        style={{ padding: "5px", fontSize: "16px", borderRadius: "5px" }}
       >
         <option value="javascript">JavaScript</option>
         <option value="python">Python</option>
